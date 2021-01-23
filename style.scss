@@ -1,0 +1,114 @@
+
+body {
+    background: #c3cfe2;
+    font-family: lato, sans-serif;
+}
+
+
+/* Portfolio Section Mobile First*/
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.2em;
+        margin: 50px 30px;
+    }
+    
+    &__content--wrapper {
+        position: relative;
+        transition: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    
+    &__image {
+        transition: 1s;
+        transition-timing-function: ease-in-out;
+    }
+    
+    &__content--wrapper:hover .portfolio__image {
+        filter: brightness(0%);
+    }
+    
+    &__text--wrapper {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    &__text {
+        transition: 0.75s;
+        transition-delay: 0.25s;
+        transition-timing-function: ease-out;
+        font-size: 14px;
+        color: transparent;
+    }
+    
+    &__button {
+        transition: 0.75s;
+        transition-delay: 0.25s;
+        transition-timing-function: ease-out;
+        color: transparent;
+        text-decoration: none;
+        border: solid 2px;
+        padding: 5px 10px;
+    }
+    
+    &__text--wrapper:hover .portfolio__text {
+        font-size: 14px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    
+    &__text--wrapper:hover .portfolio__button {
+        text-decoration: none;
+        color:red;
+        border: solid 2px;
+        padding: 5px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    .portfolio__wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.2em;
+        margin: 50px 25px;
+    }
+
+    .portfolio__text {
+        font-size: 15px;
+    }
+
+    .portfolio__text--wrapper:hover .portfolio__text {
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    
+    .portfolio__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.2em;
+        margin: 50px 25px;
+    }
+
+    .portfolio__text {
+        font-size: 16px;
+    }
+
+    .portfolio__text--wrapper:hover .portfolio__text {
+        font-size: 16px;
+    }
+}
+
